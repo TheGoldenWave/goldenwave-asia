@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Knowledge Signals — GoldenWave Asia</title>
+  <meta name="description" content="GoldenWave 的知识分享文章库，记录 AI 产品、Agent 工作流架构与知识系统策展。" />
+  <meta property="og:title" content="Knowledge Signals — GoldenWave Asia" />
+  <meta property="og:description" content="AI 产品经理 / Agent 工作流架构 / 知识系统策展的知识分享入口。" />
+  <meta property="og:type" content="website" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;500;600;700;800&family=Noto+Serif+SC:wght@500;600;700;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./assets/styles.css?v=20260611-knowledge-share" />
+</head>
+<body class="knowledge-page">
+  <div class="site-shell">
+    <canvas class="wave-canvas" id="waveCanvas" aria-hidden="true"></canvas>
+    <div class="grain" aria-hidden="true"></div>
+
+    <header class="site-header static-header">
+      <a class="brand" href="./index.html#top" aria-label="GoldenWave home">
+        <svg class="brand-mark" viewBox="0 0 96 56" aria-hidden="true">
+          <defs>
+            <linearGradient id="brandWave" x1="0" x2="1">
+              <stop offset="0" stop-color="#0b54ff" stop-opacity=".16" />
+              <stop offset=".28" stop-color="#bdfcff" />
+              <stop offset=".58" stop-color="#ffd96a" />
+              <stop offset="1" stop-color="#ff6a00" />
+            </linearGradient>
+          </defs>
+          <path class="brand-wave-main" d="M8 33 C24 8 44 9 57 31 C69 50 80 45 89 24" />
+          <path class="brand-wave-ice" d="M10 42 C28 25 46 26 63 39 C74 47 82 39 90 34" />
+          <path class="brand-wave-blue" d="M11 20 C34 39 55 46 80 16" />
+        </svg>
+        <span>GoldenWave</span>
+      </a>
+      <nav class="nav" aria-label="Primary navigation">
+        <a href="./index.html#top">Home</a>
+        <a href="./index.html#works">Works</a>
+        <a href="./index.html#harness">Harness</a>
+        <a href="./index.html#knowledge">Knowledge</a>
+        <a class="active" href="./knowledge.html">Articles</a>
+      </nav>
+      <div class="header-actions">
+        <a class="icon" href="https://github.com/TheGoldenWave" aria-label="GitHub">GH</a>
+        <a class="btn ghost" href="mailto:goldenwave0322@gmail.com">Email</a>
+      </div>
+    </header>
+
+    <main>
+      <section class="section knowledge-hero">
+        <div class="knowledge-hero-copy reveal">
+          <p class="kicker">Knowledge Signals</p>
+          <h1>把个人知识变成可持续更新的 GoldenWave。</h1>
+          <p>这里承载我对 AI 产品、Agent 工作流、知识系统和 AIGC 内容的持续记录。未来内容可以从飞书妙搭 / 多维表格同步生成，前台保持独立、稳定、可搜索。</p>
+        </div>
+        <div class="signal-stack reveal" aria-label="Knowledge publishing pipeline">
+          <div class="signal-card hot">
+            <span>CMS</span>
+            <strong>Feishu Miaoda</strong>
+            <p>编辑、审核、分类、发布。</p>
+          </div>
+          <div class="signal-card">
+            <span>Sync</span>
+            <strong>JSON / Markdown</strong>
+            <p>把内容变成网站可消费的数据。</p>
+          </div>
+          <div class="signal-card ice">
+            <span>Site</span>
+            <strong>GoldenWave</strong>
+            <p>文章、专题、知识地图和个人品牌展示。</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="section article-board">
+        <div class="article-filters reveal" aria-label="Article categories">
+          <button class="active" type="button">All</button>
+          <button type="button">AI Product</button>
+          <button type="button">Agent Workflow</button>
+          <button type="button">Knowledge System</button>
+          <button type="button">AIGC</button>
+        </div>
+
+        <article class="feature-article reveal">
+          <div>
+            <p class="kicker">Featured Signal</p>
+            <h2>AI 产品经理的新核心能力：把判断力编排成可验证闭环</h2>
+            <p>当 AI 从演示走向业务系统，产品经理的价值不再只是写需求，而是设计模型、知识、流程、人机协同和质量反馈如何持续运转。</p>
+          </div>
+          <a class="btn primary" href="#article-loop">Read</a>
+        </article>
+
+        <div class="article-grid">
+          <a class="article-card reveal" id="article-loop" href="#article-loop">
+            <span>AI Product</span>
+            <h3>从 Copilot 到托管：AI 产品如何进入真实运营</h3>
+            <p>区别一次性辅助和持续托管，关键在于路由、接管、回归测试和可解释的质量信号。</p>
+            <small>2026-06-11 · 8 min</small>
+          </a>
+          <a class="article-card reveal" href="#agent-memory">
+            <span>Agent Workflow</span>
+            <h3>Agent 工作流不是 Prompt，而是可复用的运行结构</h3>
+            <p>Prompt 只是入口。真正能沉淀的资产是角色边界、工具调用、状态事件和验证门槛。</p>
+            <small>2026-06-11 · 6 min</small>
+          </a>
+          <a class="article-card reveal" id="agent-memory" href="#agent-memory">
+            <span>Knowledge System</span>
+            <h3>个人知识库为什么会成为人与 Agent 的共同记忆</h3>
+            <p>知识库不只是资料夹，而是偏好、方法、项目上下文和决策过程的外部化。</p>
+            <small>2026-06-11 · 7 min</small>
+          </a>
+          <a class="article-card reveal" href="#aigc-video">
+            <span>AIGC</span>
+            <h3>AIGC 视频产品的下一步：从生成素材到生产系统</h3>
+            <p>生成能力会越来越通用，真正的差异来自工作流、审核、分发和业务目标绑定。</p>
+            <small>2026-06-11 · 5 min</small>
+          </a>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <span>© 2026 GoldenWave Asia</span>
+      <span>Knowledge Signals powered by an independent frontend and CMS-ready content layer.</span>
+    </footer>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/gsap.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/ScrollTrigger.min.js"></script>
+  <script src="./assets/app.js?v=20260611-knowledge-share"></script>
+</body>
+</html>
